@@ -1,0 +1,12 @@
+﻿@model Settings
+
+@{
+    Layout = "_Layout";
+}
+
+<form asp-controller="Settings" asp-action="ChangeDatabase">
+    
+    <select name="databaseType" asp-for="DatabaseType" asp-items="Html.GetEnumSelectList<EDatabaseType>()"></select>
+    
+    <button type="submit"> Güncelle</button>
+</form>
